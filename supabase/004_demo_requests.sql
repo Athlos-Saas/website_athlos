@@ -1,5 +1,5 @@
 -- ============================================================================
--- ATLOS · 004_demo_requests.sql
+-- ATHLOS · 004_demo_requests.sql
 -- Solicitudes de acceso a la demo enviadas desde el sitio web público.
 -- Cualquier visitante (rol anon) puede INSERTAR; nadie puede leer desde el
 -- cliente público — solo el backend con SERVICE_ROLE key (o el SQL Editor).

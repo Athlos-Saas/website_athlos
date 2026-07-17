@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ATLOS · Sitio informativo — interacciones y formulario de demo
+   ATHLOS · Sitio informativo — interacciones y formulario de demo
    Sin frameworks: nav móvil, reveal on scroll, contadores animados y
    envío de solicitudes a la tabla `demo_requests` de Supabase.
    ========================================================================== */
@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  var config = window.ATLOS_CONFIG || {};
+  var config = window.ATHLOS_CONFIG || {};
 
   /* ---------- Nav: sombra al hacer scroll + menú móvil ---------- */
   var header = document.querySelector('.site-header');
@@ -139,8 +139,8 @@
       '\nNivel: ' + (data.team_level || '-') +
       '\n\n' + (data.message || '');
     var href =
-      'mailto:' + (config.CONTACT_EMAIL || 'hola@atlos.app') +
-      '?subject=' + encodeURIComponent('Solicitud de demo ATLOS — ' + data.organization) +
+      'mailto:' + (config.CONTACT_EMAIL || 'hola@athlos.app') +
+      '?subject=' + encodeURIComponent('Solicitud de demo ATHLOS — ' + data.organization) +
       '&body=' + encodeURIComponent(body);
     window.location.href = href;
   }
@@ -181,7 +181,7 @@
       .insert(data)
       .then(function (result) {
         if (result.error) {
-          showAlert('No pudimos registrar tu solicitud (' + result.error.message + '). Intenta de nuevo o escríbenos a ' + (config.CONTACT_EMAIL || 'hola@atlos.app') + '.');
+          showAlert('No pudimos registrar tu solicitud (' + result.error.message + '). Intenta de nuevo o escríbenos a ' + (config.CONTACT_EMAIL || 'hola@athlos.app') + '.');
           submitButton.disabled = false;
           submitButton.textContent = 'Solicitar acceso a la demo';
           return;
