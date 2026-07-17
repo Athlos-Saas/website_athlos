@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATLOS · Inteligencia artificial para el rendimiento deportivo</title>
+  <meta name="description" content="ATLOS convierte GPS, estadísticas y video en decisiones de cuerpo técnico: perfiles físicos, riesgo de fatiga, scouting y tracking de video para clubes, universidades y academias. Solicita acceso a la demo." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ATLOS · Inteligencia artificial para el rendimiento deportivo" />
+  <meta property="og:description" content="La capa de inteligencia para el deporte que aún no es élite. Perfiles físicos, alertas de fatiga, scouting y video-tracking con IA." />
+  <meta property="og:locale" content="es_ES" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ATLOS",
+    "applicationCategory": "SportsApplication",
+    "description": "Plataforma de analítica deportiva con inteligencia artificial: datos físicos (GPS), técnicos (estadísticas) y video en una sola capa de decisión.",
+    "offers": { "@type": "Offer", "price": "149", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ======================= NAV ======================= -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="brand" aria-label="ATLOS inicio">
+        <img src="assets/logo.svg" alt="" class="brand-mark" />
+        <span class="brand-name">ATLOS</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#producto">Producto</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#precios">Precios</a>
+        <a href="#faq">FAQ</a>
+        <a href="#demo" class="btn btn-primary btn-nav">Solicitar demo</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-green"></div>
+        <div class="orb orb-blue"></div>
+        <svg class="radar" viewBox="0 0 600 600" fill="none">
+          <circle cx="300" cy="300" r="120" stroke="currentColor" stroke-width="1"/>
+          <circle cx="300" cy="300" r="210" stroke="currentColor" stroke-width="1"/>
+          <circle cx="300" cy="300" r="295" stroke="currentColor" stroke-width="1"/>
+          <line x1="300" y1="5" x2="300" y2="595" stroke="currentColor" stroke-width="1"/>
+          <line x1="5" y1="300" x2="595" y2="300" stroke="currentColor" stroke-width="1"/>
+          <circle class="radar-dot" cx="390" cy="180" r="7" fill="#2ed47a" stroke="none"/>
+        </svg>
+      </div>
+
+      <div class="container hero-inner">
+        <p class="eyebrow reveal">Inteligencia artificial para el rendimiento deportivo</p>
+        <h1 class="reveal">El deporte se decidirá<br />con <span class="grad-text">datos.</span></h1>
+        <p class="hero-sub reveal">
+          ATLOS convierte GPS, estadísticas de competición y video en decisiones de cuerpo
+          técnico: perfiles físicos, alertas de fatiga, scouting y tracking — para clubes,
+          universidades y academias que aún no son élite.
+        </p>
+        <div class="hero-ctas reveal">
+          <a href="#demo" class="btn btn-primary btn-lg">Solicitar acceso a la demo</a>
+          <a href="#como-funciona" class="btn btn-ghost btn-lg">Ver cómo funciona</a>
+        </div>
+
+        <div class="hero-stats reveal">
+          <div class="hstat"><span class="hstat-value" data-count="0.891" data-decimals="3">0</span><span class="hstat-label">AUC · clasificador de goleador</span></div>
+          <div class="hstat"><span class="hstat-value" data-count="95" data-suffix="%">0</span><span class="hstat-label">accuracy · riesgo de fatiga</span></div>
+          <div class="hstat"><span class="hstat-value" data-count="119">0</span><span class="hstat-label">sesiones GPS analizadas</span></div>
+          <div class="hstat"><span class="hstat-value" data-count="156">0</span><span class="hstat-label">jugadores modelados</span></div>
+        </div>
+
+        <div class="compat reveal">
+          <span>Se integra con lo que ya tienes:</span>
+          <div class="chips">
+            <span class="chip">Catapult</span>
+            <span class="chip">VEO</span>
+            <span class="chip">CSV / Excel</span>
+            <span class="chip">Video convencional</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PROBLEMA ======================= -->
+    <section class="section" id="problema">
+      <div class="container">
+        <p class="kicker reveal">El problema</p>
+        <h2 class="reveal">Datos por todas partes, decisiones a ciegas</h2>
+        <div class="grid grid-3">
+          <article class="card reveal">
+            <div class="num-badge">1</div>
+            <h3>Información en silos</h3>
+            <p>El GPS genera CSVs, el video se mira sin cuantificar y las estadísticas de liga
+            viven en PDFs. Nadie cruza las fuentes.</p>
+          </article>
+          <article class="card reveal">
+            <div class="num-badge">2</div>
+            <h3>Herramientas de élite</h3>
+            <p>Un stack completo (GPS premium + video + scouting) supera los USD 20–40 mil al año
+            por equipo, más el analista que casi nadie tiene.</p>
+          </article>
+          <article class="card reveal">
+            <div class="num-badge">3</div>
+            <h3>Cero prescripción</h3>
+            <p>Los dashboards describen el pasado. Ningún sistema del mercado medio recomienda a
+            quién rotar, qué carga bajar o qué perfil fichar.</p>
+          </article>
+        </div>
+        <div class="callout reveal">
+          <strong>La paradoja:</strong> nunca fue tan barato generar datos deportivos — ni tan
+          grande la brecha entre quienes los aprovechan y quienes no.
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PRODUCTO ======================= -->
+    <section class="section section-alt" id="producto">
+      <div class="container">
+        <p class="kicker reveal">El producto</p>
+        <h2 class="reveal">Tres fuentes de datos, una capa de inteligencia</h2>
+        <p class="section-sub reveal">ATLOS unifica lo físico, lo técnico y el video, y devuelve
+        decisiones accionables para el cuerpo técnico.</p>
+
+        <div class="flow reveal">
+          <div class="flow-sources">
+            <div class="flow-card"><span class="flow-tag t-green">Físico</span>GPS y wearables: carga, fatiga, perfiles de esfuerzo</div>
+            <div class="flow-card"><span class="flow-tag t-green">Táctico</span>Estadísticas de liga y video-análisis: roles, tendencias</div>
+            <div class="flow-card"><span class="flow-tag t-green">Video</span>Computer vision propio: tracking desde una cámara simple</div>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-core">
+            <span>IA ATLOS</span>
+            <small>modelos descriptivos · diagnóstico · predicción · recomendación</small>
+          </div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-out">
+            <span class="flow-tag t-gold">Decisiones</span>
+            Rotaciones y cargas · prevención de fatiga · ajustes tácticos · scouting y fichajes
+          </div>
+        </div>
+
+        <div class="grid grid-3 features">
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 4-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Perfiles físicos automáticos</h3>
+            <p>Clustering sobre tus sesiones GPS: Velocista, Equilibrado y Resistente. Sabes qué
+            motor tiene cada jugador y cómo dosificarlo.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l9 16H3l9-16zM12 10v4m0 3h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Alertas de fatiga</h3>
+            <p>Un clasificador entrenado con tus propias cargas marca las sesiones de riesgo antes
+            de que el sobreuso se convierta en lesión.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Detección de anomalías</h3>
+            <p>Isolation Forest sobre cada sesión: separa errores de captura de esfuerzos
+            anómalos reales que merecen revisión del staff.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18M5 12a7 7 0 0014 0M8 7l4-4 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Goleador de élite y roles</h3>
+            <p>Modelo supervisado (AUC 0.891) que rankea a todos los atacantes de tu liga, más
+            clustering de roles: Finalizador, Creador, Llegador, Bajo volumen.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 10l4-3v10l-4-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Tracking desde video simple</h3>
+            <p>YOLOv8 + tracking convierte el video que ya grabas en distancias, velocidades y
+            mapas de calor — sin hardware óptico de decenas de miles de dólares.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.4-9.5 9-9.5 9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Wellness diario</h3>
+            <p>RPE, sueño y dolor muscular en un formulario de 30 segundos: el contexto humano
+            que convierte la carga externa en riesgo real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CÓMO FUNCIONA ======================= -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <p class="kicker reveal">Cómo funciona</p>
+        <h2 class="reveal">De tus datos a decisiones, en cuatro pasos</h2>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-n">1</div>
+            <h3>Conecta tus fuentes</h3>
+            <p>Export de Catapult u otro GPS, estadísticas de tu liga y el video que ya grabas
+            (VEO o cámara fija).</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-n">2</div>
+            <h3>ATLOS entrena con tus datos</h3>
+            <p>Los modelos se ajustan a tu plantel y tu competición — no a promedios de la élite
+            europea.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-n">3</div>
+            <h3>Recibe alertas y perfiles</h3>
+            <p>Panel web con cargas, alertas de fatiga, perfiles físicos, ranking de liga y
+            tracks de video.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-n">4</div>
+            <h3>Decide con evidencia</h3>
+            <p>Rotaciones, dosificación de cargas, ajustes tácticos y objetivos de scouting con
+            números detrás.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= RESULTADOS ======================= -->
+    <section class="section section-alt" id="resultados">
+      <div class="container">
+        <p class="kicker reveal">Resultados</p>
+        <h2 class="reveal">Modelos reales, métricas reales</h2>
+        <p class="section-sub reveal">Validado con datos reales de competición universitaria
+        (conferencia SAC 2025): 119 sesiones GPS y 156 jugadores modelados.</p>
+
+        <div class="grid grid-4 metric-cards">
+          <div class="card metric reveal">
+            <span class="metric-v" data-count="0.891" data-decimals="3">0</span>
+            <span class="metric-k">AUC</span>
+            <p>Clasificador de goleador de élite (regresión logística, validación cruzada k=5)</p>
+          </div>
+          <div class="card metric reveal">
+            <span class="metric-v" data-count="95" data-suffix="%">0</span>
+            <span class="metric-k">Accuracy</span>
+            <p>Riesgo de fatiga por sesión (precisión 97% · recall 83%)</p>
+          </div>
+          <div class="card metric reveal">
+            <span class="metric-v">94 / 5</span>
+            <span class="metric-k">Sesiones</span>
+            <p>Normales vs anómalas detectadas por Isolation Forest sobre cargas GPS</p>
+          </div>
+          <div class="card metric reveal">
+            <span class="metric-v">r ≈ 0.89</span>
+            <span class="metric-k">Correlación</span>
+            <p>Aceleraciones &gt; 4 m/s² explican el Player Load: entrena lo que importa</p>
+          </div>
+        </div>
+
+        <div class="case reveal">
+          <div class="case-head">
+            <span class="badge-green">Caso real</span>
+            <h3>John Brown University — temporada SAC 2025</h3>
+          </div>
+          <div class="case-grid">
+            <div class="case-stats">
+              <div class="cstat"><span>58%</span>posesión media (últimos 5)</div>
+              <div class="cstat"><span>3.0</span>goles a favor por partido</div>
+              <div class="cstat"><span>80%</span>victorias en el período</div>
+            </div>
+            <ul class="case-actions">
+              <li><strong>Hallazgo:</strong> solo 20% de posesión en el tercio ofensivo →
+              <strong>Acción:</strong> plan para elevarla a 25–27% con objetivos de zona 14.</li>
+              <li><strong>Hallazgo:</strong> 3 jugadores concentran ~24% del sprint a ≥34 km/h →
+              <strong>Acción:</strong> monitoreo específico y ajuste de cargas de aceleración.</li>
+              <li><strong>Hallazgo:</strong> 5 sesiones de carga anómalas →
+              <strong>Acción:</strong> revisión de captura y del microciclo con el staff.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PRECIOS ======================= -->
+    <section class="section" id="precios">
+      <div class="container">
+        <p class="kicker reveal">Precios</p>
+        <h2 class="reveal">Planes que caben en el presupuesto real de un club</h2>
+        <div class="grid grid-3 pricing">
+          <article class="card price-card reveal">
+            <h3 class="tier">Academy</h3>
+            <div class="price"><span class="cur">USD</span>149<span class="per">/mes</span></div>
+            <ul>
+              <li>Estadísticas y perfiles</li>
+              <li>Informes automáticos</li>
+              <li>Hasta 2 equipos</li>
+            </ul>
+            <a href="#demo" class="btn btn-ghost">Solicitar demo</a>
+          </article>
+          <article class="card price-card featured reveal">
+            <span class="feat-badge">El plan del nicho inicial</span>
+            <h3 class="tier">Pro</h3>
+            <div class="price"><span class="cur">USD</span>449<span class="per">/mes</span></div>
+            <ul>
+              <li>Todo Academy +</li>
+              <li>Integración GPS y alertas de fatiga</li>
+              <li>Hasta 5 equipos</li>
+            </ul>
+            <a href="#demo" class="btn btn-primary">Solicitar demo</a>
+          </article>
+          <article class="card price-card reveal">
+            <h3 class="tier">Elite</h3>
+            <div class="price"><span class="cur">USD</span>1,190<span class="per">/mes</span></div>
+            <ul>
+              <li>Todo Pro +</li>
+              <li>Computer vision y xG/xT</li>
+              <li>API dedicada</li>
+            </ul>
+            <a href="#demo" class="btn btn-ghost">Solicitar demo</a>
+          </article>
+        </div>
+        <p class="pricing-note reveal">¿Prefieres empezar pequeño? Informes puntuales desde USD 300
+        y proyectos de implementación desde USD 500 — la puerta de entrada sin suscripción.</p>
+      </div>
+    </section>
+
+    <!-- ======================= FAQ ======================= -->
+    <section class="section section-alt" id="faq">
+      <div class="container container-narrow">
+        <p class="kicker reveal">Preguntas frecuentes</p>
+        <h2 class="reveal">Lo que todo cuerpo técnico nos pregunta</h2>
+
+        <details class="faq-item reveal" open>
+          <summary>¿Necesito tener GPS propio para usar ATLOS?</summary>
+          <p>No. El plan Academy funciona solo con estadísticas y video. Si ya tienes Catapult u
+          otro GPS, ATLOS ingiere sus exports directamente y desbloquea los modelos físicos.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Funciona con VEO o con una cámara normal?</summary>
+          <p>Sí. Nuestro pipeline de computer vision procesa video convencional: detecta y sigue
+          a los jugadores, calcula distancias y velocidades y genera mapas de calor. VEO es un
+          socio natural, no un requisito.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿De quién son los datos?</summary>
+          <p>Del club, siempre. ATLOS opera con consentimiento del atleta y anonimización; los
+          modelos agregados nunca exponen datos identificables de tu plantel.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Cuánto tarda la implementación?</summary>
+          <p>Una carga inicial de datos históricos toma días, no meses. En la primera semana ya
+          tienes perfiles físicos y ranking de liga; las alertas de fatiga maduran con 3–4
+          semanas de sesiones.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Los modelos son genéricos o se entrenan con mi equipo?</summary>
+          <p>Se entrenan con tus datos y tu competición. Un "Velocista" de tu plantel se define
+          contra tu plantel — no contra la Premier League.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Qué incluye la demo?</summary>
+          <p>Una sesión guiada de 30 minutos con datos reales de competición, acceso de prueba a
+          la plataforma y una evaluación de qué fuentes tuyas podríamos conectar primero.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ======================= DEMO FORM ======================= -->
+    <section class="section demo" id="demo">
+      <div class="container container-narrow">
+        <p class="kicker reveal">Acceso a la demo</p>
+        <h2 class="reveal">Ve tus datos convertidos en decisiones</h2>
+        <p class="section-sub reveal">Cuéntanos quién eres y te contactamos en 24–48 horas para
+        agendar una demo con datos reales.</p>
+
+        <div class="card form-card reveal">
+          <form id="demoForm" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="full_name">Nombre completo *</label>
+                <input id="full_name" name="full_name" type="text" required maxlength="120" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="email">Correo *</label>
+                <input id="email" name="email" type="email" required maxlength="160" autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="organization">Club / organización *</label>
+                <input id="organization" name="organization" type="text" required maxlength="160" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label for="role">Tu rol</label>
+                <select id="role" name="role">
+                  <option value="">Selecciona…</option>
+                  <option>Director técnico</option>
+                  <option>Preparador físico</option>
+                  <option>Analista</option>
+                  <option>Director deportivo</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="country">País</label>
+                <input id="country" name="country" type="text" maxlength="80" autocomplete="country-name" />
+              </div>
+              <div class="field">
+                <label for="team_level">Nivel</label>
+                <select id="team_level" name="team_level">
+                  <option value="">Selecciona…</option>
+                  <option value="universitario">Universitario</option>
+                  <option value="profesional">Profesional</option>
+                  <option value="semipro">Semiprofesional</option>
+                  <option value="academia">Academia</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">¿Qué te gustaría resolver con datos?</label>
+              <textarea id="message" name="message" rows="3" maxlength="2000"
+                placeholder="Ej.: controlar cargas para reducir lesiones, o perfilar rivales de mi liga…"></textarea>
+            </div>
+
+            <!-- honeypot anti-spam: los humanos no lo ven -->
+            <div class="hp" aria-hidden="true">
+              <label for="website_url">Sitio web</label>
+              <input id="website_url" name="website_url" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <div id="formAlert" class="form-alert" role="alert" hidden></div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">
+              Solicitar acceso a la demo
+            </button>
+            <p class="form-fine">Sin spam. Usamos tus datos solo para contactarte sobre ATLOS.</p>
+          </form>
+
+          <div id="formSuccess" class="form-success" hidden>
+            <div class="check" aria-hidden="true">✓</div>
+            <h3>¡Solicitud recibida!</h3>
+            <p>Te contactaremos en 24–48 horas para agendar tu demo. Mientras tanto, revisa la
+            sección de <a href="#resultados">resultados</a> para ver lo que ATLOS ya hace con
+            datos reales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand">
+          <img src="assets/logo.svg" alt="" class="brand-mark" />
+          <span class="brand-name">ATLOS</span>
+        </a>
+        <p class="footer-tag">Del griego <em>áthlos</em> (ἆθλος): la hazaña, la contienda.<br />
+        Construido en Costa Rica para el deporte de las Américas.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <a href="#producto">Funciones</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#precios">Precios</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="#resultados">Caso de estudio</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#demo">Solicitar demo</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:hola@atlos.app" id="contactMail">hola@atlos.app</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> ATLOS. Todos los derechos reservados.</span>
+      <span>Analítica deportiva con inteligencia artificial.</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
