@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ATHLOS · Inteligencia artificial para el rendimiento deportivo</title>
-  <meta name="description" content="ATHLOS convierte GPS, estadísticas y video en decisiones de cuerpo técnico: perfiles físicos, riesgo de fatiga, scouting y tracking de video para clubes, universidades y academias. Solicita acceso a la demo." />
+  <meta name="description" content="ATHLOS convierte GPS, estadísticas, video y event data profesional en decisiones de cuerpo técnico: xG propio, computer vision, scouting por similitud, pressing index, perfiles físicos y alertas de fatiga para clubes, universidades y academias." />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="ATHLOS · Inteligencia artificial para el rendimiento deportivo" />
-  <meta property="og:description" content="La capa de inteligencia para el deporte que aún no es élite. Perfiles físicos, alertas de fatiga, scouting y video-tracking con IA." />
+  <meta property="og:description" content="La capa de inteligencia para el deporte. 14 modelos de IA: xG propio, computer vision, scouting por similitud, pressing, perfiles físicos y alertas de fatiga." />
   <meta property="og:locale" content="es_ES" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -24,7 +24,7 @@
     "@type": "SoftwareApplication",
     "name": "ATHLOS",
     "applicationCategory": "SportsApplication",
-    "description": "Plataforma de analítica deportiva con inteligencia artificial: datos físicos (GPS), técnicos (estadísticas) y video en una sola capa de decisión.",
+    "description": "Plataforma de analítica deportiva con inteligencia artificial: 14 modelos de ML (xG, scouting, pressing, fatiga), computer vision, GPS y event data de +3000 partidos profesionales.",
     "offers": { "@type": "Offer", "price": "149", "priceCurrency": "USD" }
   }
   </script>
@@ -74,9 +74,9 @@
         <p class="eyebrow reveal">Inteligencia artificial para el rendimiento deportivo</p>
         <h1 class="reveal">El deporte se decidirá<br />con <span class="grad-text">datos.</span></h1>
         <p class="hero-sub reveal">
-          ATHLOS convierte GPS, estadísticas de competición y video en decisiones de cuerpo
-          técnico: perfiles físicos, alertas de fatiga, scouting y tracking — para clubes,
-          universidades y academias que aún no son élite.
+          ATHLOS convierte GPS, estadísticas de competición, video y event data profesional en
+          decisiones de cuerpo técnico: xG propio, perfiles físicos, alertas de fatiga, computer
+          vision, scouting y pressing — para clubes, universidades y academias.
         </p>
         <div class="hero-ctas reveal">
           <a href="#demo" class="btn btn-primary btn-lg">Solicitar acceso a la demo</a>
@@ -84,10 +84,10 @@
         </div>
 
         <div class="hero-stats reveal">
-          <div class="hstat"><span class="hstat-value" data-count="0.891" data-decimals="3">0</span><span class="hstat-label">AUC · clasificador de goleador</span></div>
+          <div class="hstat"><span class="hstat-value" data-count="14">0</span><span class="hstat-label">modelos de IA en producción</span></div>
           <div class="hstat"><span class="hstat-value" data-count="95" data-suffix="%">0</span><span class="hstat-label">accuracy · riesgo de fatiga</span></div>
-          <div class="hstat"><span class="hstat-value" data-count="119">0</span><span class="hstat-label">sesiones GPS analizadas</span></div>
-          <div class="hstat"><span class="hstat-value" data-count="156">0</span><span class="hstat-label">jugadores modelados</span></div>
+          <div class="hstat"><span class="hstat-value" data-count="3000" data-suffix="+">0</span><span class="hstat-label">partidos profesionales analizados</span></div>
+          <div class="hstat"><span class="hstat-value" data-count="10" data-suffix="M+">0</span><span class="hstat-label">eventos tácticos procesados</span></div>
         </div>
 
         <div class="compat reveal">
@@ -97,6 +97,8 @@
             <span class="chip">VEO</span>
             <span class="chip">CSV / Excel</span>
             <span class="chip">Video convencional</span>
+            <span class="chip">StatsBomb</span>
+            <span class="chip">API-Football</span>
           </div>
         </div>
       </div>
@@ -197,9 +199,26 @@
             <div class="ficon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 10l4-3v10l-4-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
             </div>
-            <h3>Tracking desde video simple</h3>
-            <p>YOLOv8 + tracking convierte el video que ya grabas en distancias, velocidades y
-            mapas de calor — sin hardware óptico de decenas de miles de dólares.</p>
+            <h3>Computer vision avanzado</h3>
+            <p>YOLOv8 + tracking convierte el video que ya grabas en distancias, velocidades,
+            mapas de calor, detección de pelota y eventos tácticos (pases, pérdidas, conducciones)
+            — sin hardware óptico de decenas de miles de dólares.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3v9l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Expected Goals (xG) propio</h3>
+            <p>Modelo entrenado con +60 000 disparos de partidos reales de élite. Mide la calidad
+            real de cada oportunidad de gol: distancia, ángulo, presión defensiva, parte del cuerpo.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="8" r="1" fill="currentColor"/><circle cx="8" cy="13" r="1" fill="currentColor"/><circle cx="14" cy="13" r="1" fill="currentColor"/></svg>
+            </div>
+            <h3>Motor de scouting por similitud</h3>
+            <p>¿Buscas un jugador con perfil similar a tu mejor delantero? El motor compara 11
+            dimensiones tácticas contra miles de jugadores profesionales y te da los 10 más parecidos.</p>
           </article>
           <article class="card reveal">
             <div class="ficon" aria-hidden="true">
@@ -208,6 +227,14 @@
             <h3>Wellness diario</h3>
             <p>RPE, sueño y dolor muscular en un formulario de 30 segundos: el contexto humano
             que convierte la carga externa en riesgo real.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Pressing y roles tácticos</h3>
+            <p>Índice de pressing individual, roles tácticos emergentes por clustering y análisis
+            de eficacia de formaciones — todo derivado de event data profesional.</p>
           </article>
         </div>
       </div>
@@ -252,29 +279,30 @@
       <div class="container">
         <p class="kicker reveal">Resultados</p>
         <h2 class="reveal">Modelos reales, métricas reales</h2>
-        <p class="section-sub reveal">Validado con datos reales de competición universitaria
-        (conferencia SAC 2025): 119 sesiones GPS y 156 jugadores modelados.</p>
+        <p class="section-sub reveal">Validado con datos reales: competición universitaria (SAC 2025)
+        y +3 000 partidos profesionales de élite (La Liga, Champions League, World Cup, Premier League).</p>
 
         <div class="grid grid-4 metric-cards">
           <div class="card metric reveal">
-            <span class="metric-v" data-count="0.891" data-decimals="3">0</span>
-            <span class="metric-k">AUC</span>
-            <p>Clasificador de goleador de élite (regresión logística, validación cruzada k=5)</p>
+            <span class="metric-v" data-count="14">0</span>
+            <span class="metric-k">Modelos IA</span>
+            <p>xG, xA, pressing, scouting por similitud, roles tácticos, fatiga, anomalías, perfiles
+            físicos y más — todos validados con datos reales</p>
           </div>
           <div class="card metric reveal">
             <span class="metric-v" data-count="95" data-suffix="%">0</span>
             <span class="metric-k">Accuracy</span>
-            <p>Riesgo de fatiga por sesión (precisión 97% · recall 83%)</p>
+            <p>Riesgo de fatiga por sesión (precisión 97% · recall 83%) con datos GPS reales</p>
           </div>
           <div class="card metric reveal">
-            <span class="metric-v">94 / 5</span>
-            <span class="metric-k">Sesiones</span>
-            <p>Normales vs anómalas detectadas por Isolation Forest sobre cargas GPS</p>
+            <span class="metric-v" data-count="60" data-suffix="K+">0</span>
+            <span class="metric-k">Disparos</span>
+            <p>Modelo xG propio entrenado con +60 000 tiros de partidos profesionales de élite</p>
           </div>
           <div class="card metric reveal">
-            <span class="metric-v">r ≈ 0.89</span>
-            <span class="metric-k">Correlación</span>
-            <p>Aceleraciones &gt; 4 m/s² explican el Player Load: entrena lo que importa</p>
+            <span class="metric-v" data-count="20" data-suffix="K+">0</span>
+            <span class="metric-k">Jugadores</span>
+            <p>Indexados para el motor de scouting: encuentra el perfil que buscas en segundos</p>
           </div>
         </div>
 
@@ -312,7 +340,8 @@
             <h3 class="tier">Academy</h3>
             <div class="price"><span class="cur">USD</span>149<span class="per">/mes</span></div>
             <ul>
-              <li>Estadísticas y perfiles</li>
+              <li>Estadísticas y perfiles físicos</li>
+              <li>Alertas de fatiga y wellness</li>
               <li>Informes automáticos</li>
               <li>Hasta 2 equipos</li>
             </ul>
@@ -324,7 +353,9 @@
             <div class="price"><span class="cur">USD</span>449<span class="per">/mes</span></div>
             <ul>
               <li>Todo Academy +</li>
-              <li>Integración GPS y alertas de fatiga</li>
+              <li>Integración GPS y computer vision</li>
+              <li>xG, xA y pressing index</li>
+              <li>Scouting por similitud de jugadores</li>
               <li>Hasta 5 equipos</li>
             </ul>
             <a href="#demo" class="btn btn-primary">Solicitar demo</a>
@@ -334,7 +365,9 @@
             <div class="price"><span class="cur">USD</span>1,190<span class="per">/mes</span></div>
             <ul>
               <li>Todo Pro +</li>
-              <li>Computer vision y xG/xT</li>
+              <li>14 modelos IA completos</li>
+              <li>Event data de élite (3 000+ partidos)</li>
+              <li>AthlosBot (asistente IA)</li>
               <li>API dedicada</li>
             </ul>
             <a href="#demo" class="btn btn-ghost">Solicitar demo</a>
@@ -376,7 +409,22 @@
         <details class="faq-item reveal">
           <summary>¿Los modelos son genéricos o se entrenan con mi equipo?</summary>
           <p>Se entrenan con tus datos y tu competición. Un "Velocista" de tu plantel se define
-          contra tu plantel — no contra la Premier League.</p>
+          contra tu plantel — no contra la Premier League. Además, los modelos avanzados (xG,
+          scouting, pressing) se calibran con +3 000 partidos profesionales para darte benchmarks
+          de referencia mundial.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Qué es el xG y cómo lo calcula ATHLOS?</summary>
+          <p>Expected Goals (xG) mide la probabilidad real de que un disparo termine en gol,
+          considerando distancia, ángulo, presión defensiva y parte del cuerpo. ATHLOS entrena su
+          propio modelo con +60 000 disparos reales de partidos de élite — no dependemos de
+          proveedores externos.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Cómo funciona el scouting por similitud?</summary>
+          <p>El motor compara 11 dimensiones tácticas (pases, regates, pressing, carries,
+          intercepciones...) de cada jugador contra miles de profesionales indexados. Te dice
+          los 10 jugadores más parecidos al perfil que buscas, con una métrica de distancia.</p>
         </details>
         <details class="faq-item reveal">
           <summary>¿Qué incluye la demo?</summary>
