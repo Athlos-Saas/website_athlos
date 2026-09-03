@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ATHLOS · Inteligencia artificial para el rendimiento deportivo</title>
-  <meta name="description" content="ATHLOS convierte GPS, estadísticas, video y event data profesional en decisiones de cuerpo técnico: xG propio, computer vision, scouting por similitud, pressing index, perfiles físicos y alertas de fatiga para clubes, universidades y academias." />
+  <meta name="description" content="ATHLOS convierte GPS, estadísticas, video y event data profesional en decisiones de cuerpo técnico: xG propio, computer vision, simulación táctica, simulador de enfrentamientos, perfiles de jugador tipo FIFA, scouting con IA por estilo de juego, pressing, perfiles físicos y alertas de fatiga para clubes, universidades y academias." />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="ATHLOS · Inteligencia artificial para el rendimiento deportivo" />
-  <meta property="og:description" content="La capa de inteligencia para el deporte. 14 modelos de IA: xG propio, computer vision, scouting por similitud, pressing, perfiles físicos y alertas de fatiga." />
+  <meta property="og:description" content="La capa de inteligencia para el deporte: xG propio, computer vision, simulación táctica, simulador de enfrentamientos, perfiles de jugador tipo FIFA, scouting con IA por estilo, pressing, perfiles físicos y alertas de fatiga." />
   <meta property="og:locale" content="es_ES" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -24,7 +24,7 @@
     "@type": "SoftwareApplication",
     "name": "ATHLOS",
     "applicationCategory": "SportsApplication",
-    "description": "Plataforma de analítica deportiva con inteligencia artificial: 14 modelos de ML (xG, scouting, pressing, fatiga), computer vision, GPS y event data de +3000 partidos profesionales.",
+    "description": "Plataforma de analítica deportiva con inteligencia artificial: xG, scouting con IA por estilo, simulación táctica y de enfrentamientos, perfiles de jugador tipo FIFA, pressing y fatiga, computer vision, GPS y event data de +3000 partidos profesionales.",
     "offers": { "@type": "Offer", "price": "149", "priceCurrency": "USD" }
   }
   </script>
@@ -75,8 +75,9 @@
         <h1 class="reveal">El deporte se decidirá<br />con <span class="grad-text">datos.</span></h1>
         <p class="hero-sub reveal">
           ATHLOS convierte GPS, estadísticas de competición, video y event data profesional en
-          decisiones de cuerpo técnico: xG propio, perfiles físicos, alertas de fatiga, computer
-          vision, scouting y pressing — para clubes, universidades y academias.
+          decisiones de cuerpo técnico: xG propio, simulación táctica, perfiles de jugador tipo
+          FIFA, scouting con IA, computer vision, alertas de fatiga y más — para clubes,
+          universidades y academias.
         </p>
         <div class="hero-ctas reveal">
           <a href="#demo" class="btn btn-primary btn-lg">Solicitar acceso a la demo</a>
@@ -84,7 +85,7 @@
         </div>
 
         <div class="hero-stats reveal">
-          <div class="hstat"><span class="hstat-value" data-count="14">0</span><span class="hstat-label">modelos de IA en producción</span></div>
+          <div class="hstat"><span class="hstat-value" data-count="18">0</span><span class="hstat-label">modelos de IA en producción</span></div>
           <div class="hstat"><span class="hstat-value" data-count="95" data-suffix="%">0</span><span class="hstat-label">accuracy · riesgo de fatiga</span></div>
           <div class="hstat"><span class="hstat-value" data-count="3000" data-suffix="+">0</span><span class="hstat-label">partidos profesionales analizados</span></div>
           <div class="hstat"><span class="hstat-value" data-count="10" data-suffix="M+">0</span><span class="hstat-label">eventos tácticos procesados</span></div>
@@ -236,6 +237,42 @@
             <p>Índice de pressing individual, roles tácticos emergentes por clustering y análisis
             de eficacia de formaciones — todo derivado de event data profesional.</p>
           </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Simulación táctica con IA</h3>
+            <p>xG interactivo (haz clic en la cancha y mide la probabilidad de gol), simulación de
+            jugadas paso a paso y sugerencia del <strong>11 ideal</strong> por equipo y formación,
+            combinando disponibilidad física y aporte técnico.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 3l4 4-4 4M18 21l-4-4 4-4M4 7h9M20 17h-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Simulador de enfrentamientos</h3>
+            <p>Enfrenta dos equipos y obtén el marcador más probable, la probabilidad de victoria,
+            empate y derrota y el xG esperado — un modelo de Poisson sobre la fuerza real de cada
+            plantel, con factor de localía.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.9H22l-6 4.3 2.3 7L12 16.9 5.7 20.2 8 13.2 2 8.9h7.6L12 2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Perfiles de jugador tipo FIFA</h3>
+            <p>Cada jugador con un <strong>overall</strong> y seis atributos (ritmo, tiro, pase,
+            regate, defensa, físico) sobre un radar, más sus estadísticas reales de xG, asistencias,
+            regates y presiones. Datos profesionales de referencia, no números inventados.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 7L9 18l-5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3>Scouting IA por estilo de juego</h3>
+            <p>Dile a la IA qué necesitas (posición y estilo: posesión, presión alta, contragolpe…)
+            o pídele "el que mejor encaja con mi equipo", y ordena a miles de jugadores por su
+            <strong>ajuste real</strong> a ese perfil, con la razón de cada recomendación.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -266,9 +303,9 @@
           </div>
           <div class="step reveal">
             <div class="step-n">4</div>
-            <h3>Decide con evidencia</h3>
-            <p>Rotaciones, dosificación de cargas, ajustes tácticos y objetivos de scouting con
-            números detrás.</p>
+            <h3>Simula, compara y decide</h3>
+            <p>Arma tu 11 ideal, simula enfrentamientos, calcula xG en la cancha y busca fichajes
+            por estilo de juego — rotaciones, cargas, táctica y scouting con números detrás.</p>
           </div>
         </div>
       </div>
@@ -284,10 +321,10 @@
 
         <div class="grid grid-4 metric-cards">
           <div class="card metric reveal">
-            <span class="metric-v" data-count="14">0</span>
+            <span class="metric-v" data-count="18">0</span>
             <span class="metric-k">Modelos IA</span>
-            <p>xG, xA, pressing, scouting por similitud, roles tácticos, fatiga, anomalías, perfiles
-            físicos y más — todos validados con datos reales</p>
+            <p>xG, xA, pressing, scouting con IA, simulación táctica y de enfrentamientos, roles,
+            fatiga, anomalías, perfiles físicos y más — validados con datos reales</p>
           </div>
           <div class="card metric reveal">
             <span class="metric-v" data-count="95" data-suffix="%">0</span>
@@ -355,7 +392,8 @@
               <li>Todo Academy +</li>
               <li>Integración GPS y computer vision</li>
               <li>xG, xA y pressing index</li>
-              <li>Scouting por similitud de jugadores</li>
+              <li>Scouting IA por estilo de juego</li>
+              <li>Simulación táctica y 11 ideal</li>
               <li>Hasta 5 equipos</li>
             </ul>
             <a href="#demo" class="btn btn-primary">Solicitar demo</a>
@@ -365,7 +403,8 @@
             <div class="price"><span class="cur">USD</span>1,190<span class="per">/mes</span></div>
             <ul>
               <li>Todo Pro +</li>
-              <li>14 modelos IA completos</li>
+              <li>Suite de IA completa</li>
+              <li>Simulador de enfrentamientos y perfiles tipo FIFA</li>
               <li>Event data de élite (3 000+ partidos)</li>
               <li>AthlosBot (asistente IA)</li>
               <li>API dedicada</li>
@@ -421,10 +460,27 @@
           proveedores externos.</p>
         </details>
         <details class="faq-item reveal">
-          <summary>¿Cómo funciona el scouting por similitud?</summary>
-          <p>El motor compara 11 dimensiones tácticas (pases, regates, pressing, carries,
-          intercepciones...) de cada jugador contra miles de profesionales indexados. Te dice
-          los 10 jugadores más parecidos al perfil que buscas, con una métrica de distancia.</p>
+          <summary>¿Cómo funciona el scouting con IA?</summary>
+          <p>Le indicas la posición y el estilo de juego que buscas (posesión, presión alta,
+          contragolpe, ofensivo, defensivo) —o le pides "el que mejor encaja con mi equipo", y la
+          IA infiere tu estilo— y ordena a miles de jugadores profesionales por su ajuste real a
+          ese perfil, mostrando la razón de cada recomendación. También puedes buscar un jugador
+          por nombre y abrir su ficha completa.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Qué es la simulación táctica y el simulador de enfrentamientos?</summary>
+          <p>Puedes calcular el xG de cualquier tiro haciendo clic en la cancha, encadenar una
+          jugada paso a paso, y pedir el 11 ideal de un equipo según la formación que elijas. El
+          simulador de enfrentamientos cruza dos equipos y estima, con un modelo de Poisson sobre
+          la fuerza real de cada plantel, el marcador más probable y las probabilidades de
+          victoria, empate y derrota.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Qué son los perfiles de jugador tipo FIFA?</summary>
+          <p>Cada jugador se resume en un overall y seis atributos (ritmo, tiro, pase, regate,
+          defensa, físico) sobre un gráfico de radar, calculados como el percentil del jugador
+          frente a miles de profesionales. Debajo verás sus estadísticas reales: xG, asistencias,
+          regates, presiones y más. Nada inventado: todo se deriva de event data profesional.</p>
         </details>
         <details class="faq-item reveal">
           <summary>¿Qué incluye la demo?</summary>
