@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ATHLOS · Inteligencia artificial para el rendimiento deportivo</title>
-  <meta name="description" content="ATHLOS convierte GPS, estadísticas, video y event data profesional en decisiones de cuerpo técnico: xG propio, computer vision, simulación táctica, simulador de enfrentamientos, perfiles de jugador tipo FIFA, scouting con IA por estilo de juego, pressing, perfiles físicos y alertas de fatiga para clubes, universidades y academias." />
+  <title>ATHLOS · Los datos del talento que nadie está midiendo</title>
+  <meta name="description" content="ATHLOS genera datos propios a partir de video normal y GPS para academias, universidades y ligas de ascenso: distancias, velocidades, mapas de calor, redes de pase y xG, con IA para scouting, simulación táctica y alertas de fatiga. Perfil verificado del atleta y portal de wellness. Analiza gratis un partido, sin tarjeta." />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ATHLOS · Inteligencia artificial para el rendimiento deportivo" />
-  <meta property="og:description" content="La capa de inteligencia para el deporte: xG propio, computer vision, simulación táctica, simulador de enfrentamientos, perfiles de jugador tipo FIFA, scouting con IA por estilo, pressing, perfiles físicos y alertas de fatiga." />
+  <meta property="og:title" content="ATHLOS · Los datos del talento que nadie está midiendo" />
+  <meta property="og:description" content="Datos propios desde video normal y GPS para academias, universidades y ligas de ascenso. Computer vision, xG, scouting con IA y Perfil verificado del atleta. Analiza gratis un partido." />
   <meta property="og:locale" content="es_ES" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -18,43 +18,57 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 
+  <!-- PROPUESTA PENDIENTE DE APROBACIÓN DEL NEGOCIO: el plan Coach (USD 39/mes)
+       y la oferta "1 partido gratis sin tarjeta" son propuestas. Si cambian,
+       actualizar a la vez este JSON-LD y la sección #precios. -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "ATHLOS",
     "applicationCategory": "SportsApplication",
-    "description": "Plataforma de analítica deportiva con inteligencia artificial: xG, scouting con IA por estilo, simulación táctica y de enfrentamientos, perfiles de jugador tipo FIFA, pressing y fatiga, computer vision, GPS y event data de +3000 partidos profesionales.",
-    "offers": { "@type": "Offer", "price": "149", "priceCurrency": "USD" }
+    "description": "Los datos del talento que nadie está midiendo: ATHLOS genera datos propios a partir de video normal y GPS para academias, universidades y ligas de ascenso, con computer vision, xG, scouting con IA por estilo, simulación táctica, alertas de fatiga, Perfil verificado del atleta y event data de +3000 partidos profesionales.",
+    "offers": [
+      { "@type": "Offer", "name": "Análisis gratis de un partido", "description": "1 partido gratis, sin tarjeta", "price": "0", "priceCurrency": "USD" },
+      { "@type": "Offer", "name": "Coach", "price": "39", "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "39", "priceCurrency": "USD", "unitCode": "MON" } },
+      { "@type": "Offer", "name": "Academy", "price": "149", "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "149", "priceCurrency": "USD", "unitCode": "MON" } },
+      { "@type": "Offer", "name": "Pro", "price": "449", "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "449", "priceCurrency": "USD", "unitCode": "MON" } },
+      { "@type": "Offer", "name": "Elite", "price": "1190", "priceCurrency": "USD",
+        "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1190", "priceCurrency": "USD", "unitCode": "MON" } }
+    ]
   }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <!-- ======================= NAV ======================= -->
   <header class="site-header" id="top">
-    <nav class="nav container">
+    <nav class="nav container" aria-label="Principal">
       <a href="#top" class="brand" aria-label="ATHLOS inicio">
         <img src="assets/logo.svg" alt="" class="brand-mark" />
         <span class="brand-name">ATHLOS</span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
 
       <div class="nav-links" id="navLinks">
         <a href="#producto">Producto</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#resultados">Resultados</a>
+        <a href="#perfil-atleta">Atletas</a>
+        <a href="#laboratorio">Laboratorio</a>
         <a href="#precios">Precios</a>
         <a href="#faq">FAQ</a>
-        <a href="#demo" class="btn btn-primary btn-nav">Solicitar demo</a>
+        <a href="#demo" class="btn btn-primary btn-nav" data-request-type="free_report">Analiza gratis un partido</a>
       </div>
     </nav>
   </header>
 
-  <main>
+  <main id="contenido">
     <!-- ======================= HERO ======================= -->
     <section class="hero">
       <div class="hero-bg" aria-hidden="true">
@@ -71,18 +85,20 @@
       </div>
 
       <div class="container hero-inner">
-        <p class="eyebrow reveal">Inteligencia artificial para el rendimiento deportivo</p>
-        <h1 class="reveal">El deporte se decidirá<br />con <span class="grad-text">datos.</span></h1>
+        <p class="eyebrow reveal">Datos propios · IA · computer vision</p>
+        <h1 class="reveal">Los datos del talento<br />que <span class="grad-text">nadie está midiendo.</span></h1>
         <p class="hero-sub reveal">
-          ATHLOS convierte GPS, estadísticas de competición, video y event data profesional en
-          decisiones de cuerpo técnico: xG propio, simulación táctica, perfiles de jugador tipo
-          FIFA, scouting con IA, computer vision, alertas de fatiga y más — para clubes,
-          universidades y academias.
+          ATHLOS genera datos propios a partir del video que ya grabas y de tu GPS —distancias,
+          velocidades, mapas de calor, redes de pase y xG— para academias, universidades y ligas
+          de ascenso, donde los grandes proveedores de datos no llegan. Y los convierte en
+          decisiones con IA: scouting, simulación táctica, alertas de fatiga y el nuevo
+          <strong>Perfil verificado del atleta</strong>.
         </p>
         <div class="hero-ctas reveal">
-          <a href="#demo" class="btn btn-primary btn-lg">Solicitar acceso a la demo</a>
-          <a href="#como-funciona" class="btn btn-ghost btn-lg">Ver cómo funciona</a>
+          <a href="#demo" class="btn btn-primary btn-lg" data-request-type="free_report">Analiza gratis un partido</a>
+          <a href="#demo" class="btn btn-ghost btn-lg" data-request-type="demo">Solicitar demo</a>
         </div>
+        <p class="hero-fine reveal"><span class="dot" aria-hidden="true"></span>1 partido gratis, sin tarjeta: reporte con distancias, velocidades, mapa de calor y red de pases.</p>
 
         <div class="hero-stats reveal">
           <div class="hstat"><span class="hstat-value" data-count="18">0</span><span class="hstat-label">modelos de IA en producción</span></div>
@@ -94,10 +110,10 @@
         <div class="compat reveal">
           <span>Se integra con lo que ya tienes:</span>
           <div class="chips">
-            <span class="chip">Catapult</span>
-            <span class="chip">VEO</span>
-            <span class="chip">CSV / Excel</span>
             <span class="chip">Video convencional</span>
+            <span class="chip">VEO</span>
+            <span class="chip">Catapult</span>
+            <span class="chip">CSV / Excel</span>
             <span class="chip">StatsBomb</span>
             <span class="chip">API-Football</span>
           </div>
@@ -109,47 +125,109 @@
     <section class="section" id="problema">
       <div class="container">
         <p class="kicker reveal">El problema</p>
-        <h2 class="reveal">Datos por todas partes, decisiones a ciegas</h2>
+        <h2 class="reveal">Hay talento en todas partes. Datos, casi en ninguna.</h2>
         <div class="grid grid-3">
           <article class="card reveal">
-            <div class="num-badge">1</div>
-            <h3>Información en silos</h3>
-            <p>El GPS genera CSVs, el video se mira sin cuantificar y las estadísticas de liga
-            viven en PDFs. Nadie cruza las fuentes.</p>
+            <div class="num-badge" aria-hidden="true">1</div>
+            <h3>El talento sin datos no se ve</h3>
+            <p>Las bases de datos de élite cubren las grandes ligas. En academias, universidades y
+            ligas de ascenso casi nadie mide nada, y el jugador que no tiene datos no aparece en el
+            radar de ningún scout.</p>
           </article>
           <article class="card reveal">
-            <div class="num-badge">2</div>
-            <h3>Herramientas de élite</h3>
+            <div class="num-badge" aria-hidden="true">2</div>
+            <h3>Herramientas de élite, precios de élite</h3>
             <p>Un stack completo (GPS premium + video + scouting) supera los USD 20–40 mil al año
             por equipo, más el analista que casi nadie tiene.</p>
           </article>
           <article class="card reveal">
-            <div class="num-badge">3</div>
-            <h3>Cero prescripción</h3>
-            <p>Los dashboards describen el pasado. Ningún sistema del mercado medio recomienda a
-            quién rotar, qué carga bajar o qué perfil fichar.</p>
+            <div class="num-badge" aria-hidden="true">3</div>
+            <h3>Silos y cero prescripción</h3>
+            <p>El GPS genera CSVs, el video se mira sin cuantificar y las estadísticas viven en
+            PDFs. Nadie cruza las fuentes ni recomienda a quién rotar, qué carga bajar o qué perfil
+            fichar.</p>
           </article>
         </div>
         <div class="callout reveal">
-          <strong>La paradoja:</strong> nunca fue tan barato generar datos deportivos — ni tan
-          grande la brecha entre quienes los aprovechan y quienes no.
+          <strong>La paradoja:</strong> nunca fue tan barato generar datos deportivos —basta un
+          video y un GPS— ni tan grande la brecha entre quienes los aprovechan y quienes no. ATHLOS
+          existe para cerrarla.
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PARTIDO GRATIS ======================= -->
+    <!-- PROPUESTA PENDIENTE DE APROBACIÓN DEL NEGOCIO: "1 partido gratis sin tarjeta". -->
+    <section class="section section-alt" id="partido-gratis">
+      <div class="container">
+        <p class="kicker reveal">Empieza gratis</p>
+        <h2 class="reveal">Analiza gratis un partido</h2>
+        <p class="section-sub reveal">Sin tarjeta y sin instalar nada: nos envías el enlace a la
+        grabación de un partido y te devolvemos un reporte generado con computer vision.</p>
+
+        <div class="free-grid">
+          <ol class="free-steps reveal">
+            <li>
+              <span class="step-n" aria-hidden="true">1</span>
+              <div><h3>Envía el enlace de tu video</h3>
+              <p>Un enlace compartible (p. ej. YouTube o Google Drive) a la grabación completa del
+              partido, idealmente desde una cámara fija y elevada.</p></div>
+            </li>
+            <li>
+              <span class="step-n" aria-hidden="true">2</span>
+              <div><h3>ATHLOS lo mide</h3>
+              <p>Nuestro pipeline de computer vision detecta y sigue a los jugadores y el balón en
+              video convencional, sin hardware óptico especial.</p></div>
+            </li>
+            <li>
+              <span class="step-n" aria-hidden="true">3</span>
+              <div><h3>Recibe tu reporte</h3>
+              <p>Te escribimos al correo que nos dejes con el reporte del partido, o para pedirte
+              algo más si el video no permite medir con fiabilidad.</p></div>
+            </li>
+          </ol>
+
+          <div class="card report-card reveal">
+            <h3>Qué incluye tu reporte</h3>
+            <ul class="report-list">
+              <li>
+                <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <div><strong>Distancias recorridas</strong><span>Cuánto corre tu equipo durante el partido.</span></div>
+              </li>
+              <li>
+                <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 13l4-4M4 17a8 8 0 1116 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+                <div><strong>Velocidades</strong><span>Velocidades máximas y esfuerzos de alta intensidad.</span></div>
+              </li>
+              <li>
+                <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="11" r="3" fill="currentColor" opacity=".55"/><path d="M12 5v14" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                <div><strong>Mapa de calor</strong><span>Dónde se jugó realmente el partido.</span></div>
+              </li>
+              <li>
+                <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="6" r="2" fill="currentColor"/><circle cx="12" cy="18" r="2" fill="currentColor"/><circle cx="19" cy="12" r="2" fill="currentColor"/><path d="M6.5 11l4-4M6.5 13l4 4M13.5 7l4 4M13.5 17l4-4" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                <div><strong>Red de pases</strong><span>Quién conecta con quién y por dónde circula el balón.</span></div>
+              </li>
+            </ul>
+            <a href="#demo" class="btn btn-primary btn-block" data-request-type="free_report">Analiza gratis un partido</a>
+            <p class="form-fine">1 partido gratis · sin tarjeta · sin compromiso</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ======================= PRODUCTO ======================= -->
-    <section class="section section-alt" id="producto">
+    <section class="section" id="producto">
       <div class="container">
         <p class="kicker reveal">El producto</p>
-        <h2 class="reveal">Tres fuentes de datos, una capa de inteligencia</h2>
-        <p class="section-sub reveal">ATHLOS unifica lo físico, lo técnico y el video, y devuelve
-        decisiones accionables para el cuerpo técnico.</p>
+        <h2 class="reveal">Datos propios + una capa de inteligencia</h2>
+        <p class="section-sub reveal">ATHLOS mide lo que nadie mide —desde el video y el GPS— y lo
+        cruza con estadísticas y event data profesional para devolver decisiones accionables al
+        cuerpo técnico.</p>
 
         <div class="flow reveal">
           <div class="flow-sources">
+            <div class="flow-card"><span class="flow-tag t-green">Video</span>Computer vision propio: distancias, velocidades, mapas de calor y pases desde una cámara simple</div>
             <div class="flow-card"><span class="flow-tag t-green">Físico</span>GPS y wearables: carga, fatiga, perfiles de esfuerzo</div>
-            <div class="flow-card"><span class="flow-tag t-green">Táctico</span>Estadísticas de liga y video-análisis: roles, tendencias</div>
-            <div class="flow-card"><span class="flow-tag t-green">Video</span>Computer vision propio: tracking desde una cámara simple</div>
+            <div class="flow-card"><span class="flow-tag t-green">Táctico</span>Estadísticas de liga y event data profesional: roles, tendencias, benchmarks</div>
           </div>
           <div class="flow-arrow" aria-hidden="true">→</div>
           <div class="flow-core">
@@ -158,12 +236,30 @@
           </div>
           <div class="flow-arrow" aria-hidden="true">→</div>
           <div class="flow-out">
-            <span class="flow-tag t-gold">Decisiones</span>
-            Rotaciones y cargas · prevención de fatiga · ajustes tácticos · scouting y fichajes
+            <span class="flow-tag t-gold">Decisiones y visibilidad</span>
+            Rotaciones y cargas · prevención de fatiga · ajustes tácticos · scouting y fichajes ·
+            perfiles verificados de tus atletas
           </div>
         </div>
 
         <div class="grid grid-3 features">
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 10l4-3v10l-4-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Computer vision avanzado</h3>
+            <p>YOLOv8 + tracking convierte el video que ya grabas en distancias, velocidades,
+            mapas de calor, detección de pelota y eventos tácticos (pases, pérdidas, conducciones)
+            — sin hardware óptico de decenas de miles de dólares.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ficon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3v9l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Expected Goals (xG) propio</h3>
+            <p>Modelo entrenado con +60 000 disparos de partidos reales de élite. Mide la calidad
+            real de cada oportunidad de gol: distancia, ángulo, presión defensiva, parte del cuerpo.</p>
+          </article>
           <article class="card reveal">
             <div class="ficon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 4-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -195,23 +291,6 @@
             <h3>Goleador de élite y roles</h3>
             <p>Modelo supervisado (AUC 0.891) que rankea a todos los atacantes de tu liga, más
             clustering de roles: Finalizador, Creador, Llegador, Bajo volumen.</p>
-          </article>
-          <article class="card reveal">
-            <div class="ficon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 10l4-3v10l-4-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Computer vision avanzado</h3>
-            <p>YOLOv8 + tracking convierte el video que ya grabas en distancias, velocidades,
-            mapas de calor, detección de pelota y eventos tácticos (pases, pérdidas, conducciones)
-            — sin hardware óptico de decenas de miles de dólares.</p>
-          </article>
-          <article class="card reveal">
-            <div class="ficon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3v9l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </div>
-            <h3>Expected Goals (xG) propio</h3>
-            <p>Modelo entrenado con +60 000 disparos de partidos reales de élite. Mide la calidad
-            real de cada oportunidad de gol: distancia, ángulo, presión defensiva, parte del cuerpo.</p>
           </article>
           <article class="card reveal">
             <div class="ficon" aria-hidden="true">
@@ -277,42 +356,145 @@
       </div>
     </section>
 
+    <!-- ======================= PERFIL VERIFICADO DEL ATLETA ======================= -->
+    <!-- TODO (negocio/producto): confirmar el estado de lanzamiento del Perfil
+         verificado y de la Vitrina para scouts antes de publicar (etiqueta "Nuevo"). -->
+    <section class="section section-alt" id="perfil-atleta">
+      <div class="container split">
+        <div class="split-text">
+          <p class="kicker reveal">Nuevo · Perfil verificado del atleta</p>
+          <h2 class="reveal">Métricas medidas, no autodeclaradas</h2>
+          <p class="section-sub reveal">Una tarjeta pública y compartible con las métricas que ATHLOS
+          midió en partidos y entrenamientos reales del atleta. Para que una beca o un scout no
+          dependan de un video de highlights.</p>
+          <ul class="check-list reveal">
+            <li><strong>Medido por ATHLOS:</strong> velocidades, distancias, sprints y mapas de calor
+            a partir de video y GPS, no números escritos a mano.</li>
+            <li><strong>Un enlace para compartir</strong> con entrenadores universitarios, comités de
+            becas y scouts.</li>
+            <li><strong>Con consentimiento:</strong> el atleta y su club deciden qué se publica; en
+            menores de edad, con autorización de padres o tutores.</li>
+            <li><strong>Desde el plan Coach,</strong> con perfiles para hasta 25 atletas.</li>
+          </ul>
+
+          <div class="card scout-card reveal">
+            <div class="scout-head">
+              <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-5.5-5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+              <h3>Vitrina para scouts</h3>
+            </div>
+            <p>Scouts y clubes que usan ATHLOS exploran perfiles verificados por posición y métricas
+            medidas — solo los que el atleta y su club decidieron mostrar en la vitrina.</p>
+          </div>
+        </div>
+
+        <figure class="vcard reveal" aria-labelledby="vcardCaption">
+          <div class="vcard-inner">
+            <div class="vcard-top">
+              <div class="vcard-avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4" fill="currentColor"/><path d="M4 21a8 8 0 0116 0" fill="currentColor"/></svg>
+              </div>
+              <div>
+                <p class="vcard-name">Nombre del atleta</p>
+                <p class="vcard-meta">Posición · Club · Categoría</p>
+              </div>
+            </div>
+            <p class="vcard-badge"><span aria-hidden="true">✓</span> Verificado por ATHLOS</p>
+            <dl class="vcard-metrics">
+              <div><dt>Velocidad máx.</dt><dd>— <small>km/h</small></dd></div>
+              <div><dt>Distancia / partido</dt><dd>— <small>km</small></dd></div>
+              <div><dt>Sprints / partido</dt><dd>—</dd></div>
+              <div><dt>Partidos medidos</dt><dd>—</dd></div>
+            </dl>
+            <div class="vcard-heat" aria-hidden="true">
+              <svg viewBox="0 0 300 150" preserveAspectRatio="none">
+                <defs>
+                  <radialGradient id="heatA"><stop offset="0" stop-color="#2ed47a" stop-opacity=".75"/><stop offset="1" stop-color="#2ed47a" stop-opacity="0"/></radialGradient>
+                  <radialGradient id="heatB"><stop offset="0" stop-color="#f2c94c" stop-opacity=".55"/><stop offset="1" stop-color="#f2c94c" stop-opacity="0"/></radialGradient>
+                </defs>
+                <rect x="1" y="1" width="298" height="148" rx="4" fill="none" stroke="currentColor"/>
+                <line x1="150" y1="1" x2="150" y2="149" stroke="currentColor"/>
+                <circle cx="150" cy="75" r="22" fill="none" stroke="currentColor"/>
+                <rect x="1" y="40" width="40" height="70" fill="none" stroke="currentColor"/>
+                <rect x="259" y="40" width="40" height="70" fill="none" stroke="currentColor"/>
+                <ellipse cx="200" cy="60" rx="70" ry="45" fill="url(#heatA)"/>
+                <ellipse cx="235" cy="95" rx="45" ry="30" fill="url(#heatB)"/>
+              </svg>
+              <span>Mapa de calor</span>
+            </div>
+            <p class="vcard-share"><span aria-hidden="true">↗</span> Enlace público para compartir</p>
+          </div>
+          <figcaption id="vcardCaption">Maqueta de diseño del Perfil verificado. Los valores se
+          completan con los partidos que ATHLOS mide de cada atleta.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ======================= PORTAL DEL ATLETA ======================= -->
+    <!-- TODO (negocio/producto): confirmar el estado de lanzamiento del Portal del atleta. -->
+    <section class="section" id="portal-atleta">
+      <div class="container split split-rev">
+        <div class="phone reveal" aria-hidden="true">
+          <div class="phone-screen">
+            <p class="phone-title">Check-in de hoy</p>
+            <div class="phone-row"><span>Esfuerzo percibido (RPE)</span><i class="track"><b style="width:62%"></b></i></div>
+            <div class="phone-row"><span>Calidad de sueño</span><i class="track"><b style="width:78%"></b></i></div>
+            <div class="phone-row"><span>Dolor muscular</span><i class="track"><b style="width:30%"></b></i></div>
+            <span class="phone-btn">Enviar</span>
+            <p class="phone-foot">Mi Perfil verificado →</p>
+          </div>
+        </div>
+
+        <div class="split-text">
+          <p class="kicker reveal">Nuevo · Portal del atleta</p>
+          <h2 class="reveal">El atleta reporta su wellness desde el celular</h2>
+          <p class="section-sub reveal">Un check-in de 30 segundos —RPE, sueño y dolor muscular—
+          que le da al cuerpo técnico el contexto humano que convierte la carga en riesgo real.</p>
+          <ul class="check-list reveal">
+            <li><strong>Desde el celular,</strong> en el vestuario o en casa, sin planillas en papel.</li>
+            <li><strong>Alimenta las alertas de fatiga</strong> del cuerpo técnico junto con el GPS y el video.</li>
+            <li><strong>El atleta ve su propio Perfil verificado</strong> y decide qué compartir.</li>
+            <li><strong>El wellness es privado del club:</strong> no forma parte del perfil público.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- ======================= CÓMO FUNCIONA ======================= -->
-    <section class="section" id="como-funciona">
+    <section class="section section-alt" id="como-funciona">
       <div class="container">
         <p class="kicker reveal">Cómo funciona</p>
-        <h2 class="reveal">De tus datos a decisiones, en cuatro pasos</h2>
+        <h2 class="reveal">De un video a decisiones, en cuatro pasos</h2>
         <div class="steps">
           <div class="step reveal">
-            <div class="step-n">1</div>
+            <div class="step-n" aria-hidden="true">1</div>
+            <h3>Empieza con un partido gratis</h3>
+            <p>Envía el enlace a tu video y recibe un reporte con distancias, velocidades, mapa de
+            calor y red de pases. Sin tarjeta.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-n" aria-hidden="true">2</div>
             <h3>Conecta tus fuentes</h3>
             <p>Export de Catapult u otro GPS, estadísticas de tu liga y el video que ya grabas
             (VEO o cámara fija).</p>
           </div>
           <div class="step reveal">
-            <div class="step-n">2</div>
-            <h3>ATHLOS entrena con tus datos</h3>
+            <div class="step-n" aria-hidden="true">3</div>
+            <h3>ATHLOS mide y entrena con tus datos</h3>
             <p>Los modelos se ajustan a tu plantel y tu competición — no a promedios de la élite
             europea.</p>
           </div>
           <div class="step reveal">
-            <div class="step-n">3</div>
-            <h3>Recibe alertas y perfiles</h3>
-            <p>Panel web con cargas, alertas de fatiga, perfiles físicos, ranking de liga y
-            tracks de video.</p>
-          </div>
-          <div class="step reveal">
-            <div class="step-n">4</div>
-            <h3>Simula, compara y decide</h3>
-            <p>Arma tu 11 ideal, simula enfrentamientos, calcula xG en la cancha y busca fichajes
-            por estilo de juego — rotaciones, cargas, táctica y scouting con números detrás.</p>
+            <div class="step-n" aria-hidden="true">4</div>
+            <h3>Decide y da visibilidad</h3>
+            <p>Alertas, 11 ideal, simulación de enfrentamientos, scouting por estilo de juego y
+            perfiles verificados para que tus atletas se muestren con datos.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ======================= RESULTADOS ======================= -->
-    <section class="section section-alt" id="resultados">
+    <section class="section" id="resultados">
       <div class="container">
         <p class="kicker reveal">Resultados</p>
         <h2 class="reveal">Modelos reales, métricas reales</h2>
@@ -363,31 +545,246 @@
               <strong>Acción:</strong> revisión de captura y del microciclo con el staff.</li>
             </ul>
           </div>
+          <p class="case-link"><a href="#laboratorio">Ver este caso en visualizaciones →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= LABORATORIO ======================= -->
+    <!-- Regla: el Laboratorio usa SOLO datos reales ya publicados en el sitio
+         (hoy: caso John Brown University, SAC 2025). No añadir cifras sin fuente. -->
+    <section class="section section-alt" id="laboratorio">
+      <div class="container">
+        <p class="kicker reveal">Laboratorio ATHLOS</p>
+        <h2 class="reveal">Datos que se ven</h2>
+        <p class="section-sub reveal">Visualizaciones públicas hechas con datos medidos por ATHLOS.
+        Mira, comparte y cítanos. Esta edición: John Brown University, temporada SAC 2025.</p>
+
+        <div class="lab-grid">
+          <!-- Pieza 1: posesión media -->
+          <figure class="card lab-card reveal">
+            <figcaption>
+              <span class="lab-tag">Posesión</span>
+              <h3>JBU tuvo el balón el 58% del tiempo</h3>
+            </figcaption>
+            <svg class="viz viz-donut" viewBox="0 0 220 220" role="img" aria-labelledby="vizPosT vizPosD">
+              <title id="vizPosT">Posesión media de John Brown University</title>
+              <desc id="vizPosD">Gráfico de anillo: John Brown University 58% de posesión media en sus últimos 5 partidos; rivales 42%.</desc>
+              <circle cx="110" cy="110" r="80" fill="none" class="viz-track" stroke-width="22"/>
+              <!-- 58% de 2πr (502.65) = 291.5; se restan 2px de separación en cada extremo -->
+              <circle cx="110" cy="110" r="80" fill="none" class="viz-main" stroke-width="22"
+                stroke-dasharray="287.5 215.15" stroke-dashoffset="-2" transform="rotate(-90 110 110)">
+                <title>John Brown University: 58%</title>
+              </circle>
+              <circle cx="110" cy="110" r="80" fill="none" class="viz-rest" stroke-width="22"
+                stroke-dasharray="207.15 295.5" stroke-dashoffset="-293.5" transform="rotate(-90 110 110)">
+                <title>Rivales: 42%</title>
+              </circle>
+              <text x="110" y="112" text-anchor="middle" class="viz-big">58%</text>
+              <text x="110" y="136" text-anchor="middle" class="viz-small">posesión media</text>
+            </svg>
+            <ul class="viz-legend">
+              <li><i class="sw sw-main" aria-hidden="true"></i>JBU · 58%</li>
+              <li><i class="sw sw-rest" aria-hidden="true"></i>Rivales · 42%</li>
+            </ul>
+            <p class="lab-note">Promedio de los últimos 5 partidos.</p>
+          </figure>
+
+          <!-- Pieza 2: posesión en el tercio ofensivo vs. objetivo -->
+          <figure class="card lab-card reveal">
+            <figcaption>
+              <span class="lab-tag">Territorio</span>
+              <h3>Solo el 20% de la posesión llegó al tercio ofensivo</h3>
+            </figcaption>
+            <svg class="viz viz-pitch" viewBox="0 0 320 214" role="img" aria-labelledby="vizTerT vizTerD">
+              <title id="vizTerT">Posesión en el tercio ofensivo frente al objetivo</title>
+              <desc id="vizTerD">Cancha dividida en tercios con el tercio ofensivo resaltado: 20% de la posesión de John Brown University ocurrió en el tercio ofensivo. Debajo, una barra de 0 a 35%: valor actual 20%, objetivo del plan entre 25% y 27%.</desc>
+              <g class="pitch-lines">
+                <rect x="2" y="2" width="316" height="136" rx="4"/>
+                <line x1="160" y1="2" x2="160" y2="138"/>
+                <circle cx="160" cy="70" r="20"/>
+                <rect x="2" y="36" width="38" height="68"/>
+                <rect x="280" y="36" width="38" height="68"/>
+              </g>
+              <rect x="213" y="3" width="104" height="134" class="viz-main-fill" opacity=".28">
+                <title>Tercio ofensivo: 20% de la posesión</title>
+              </rect>
+              <line x1="107" y1="2" x2="107" y2="138" class="pitch-third"/>
+              <line x1="213" y1="2" x2="213" y2="138" class="pitch-third"/>
+              <text x="265" y="68" text-anchor="middle" class="viz-big viz-onpitch">20%</text>
+              <text x="265" y="88" text-anchor="middle" class="viz-small">tercio ofensivo</text>
+              <text x="160" y="128" text-anchor="middle" class="viz-small">dirección de ataque →</text>
+
+              <!-- barra 0–35 %: 1 punto porcentual = 8.8px, origen x=12 -->
+              <g transform="translate(0,152)">
+                <rect x="12" y="10" width="308" height="14" rx="4" class="viz-track-fill"/>
+                <rect x="232" y="6" width="17.6" height="22" rx="3" class="viz-target">
+                  <title>Objetivo del plan: 25–27%</title>
+                </rect>
+                <rect x="12" y="10" width="176" height="14" rx="4" class="viz-main-fill">
+                  <title>Actual: 20%</title>
+                </rect>
+                <text x="184" y="46" text-anchor="end" class="viz-small">actual 20%</text>
+                <text x="318" y="46" text-anchor="end" class="viz-small viz-strong">objetivo 25–27%</text>
+                <text x="12" y="60" class="viz-axis">0%</text>
+                <text x="318" y="60" text-anchor="end" class="viz-axis">35%</text>
+              </g>
+            </svg>
+            <p class="lab-note">Acción propuesta: objetivos de zona 14 para elevarla a 25–27%.</p>
+          </figure>
+
+          <!-- Pieza 3: concentración del sprint -->
+          <figure class="card lab-card reveal">
+            <figcaption>
+              <span class="lab-tag">Físico</span>
+              <h3>3 jugadores concentran ~24% del sprint a ≥34 km/h</h3>
+            </figcaption>
+            <svg class="viz viz-waffle" viewBox="0 0 220 220" role="img" aria-labelledby="vizSprT vizSprD">
+              <title id="vizSprT">Concentración del sprint a 34 km/h o más</title>
+              <desc id="vizSprD">Cuadrícula de 100 celdas: 24 celdas resaltadas representan el 24% aproximado del sprint a 34 km/h o más que concentran 3 jugadores; 76 celdas representan al resto del plantel.</desc>
+              <g id="waffle">
+                <g class="viz-main-fill"><title>3 jugadores: ~24% del sprint a ≥34 km/h</title><rect x="1" y="1" width="20" height="20" rx="3"/><rect x="23" y="1" width="20" height="20" rx="3"/><rect x="45" y="1" width="20" height="20" rx="3"/><rect x="67" y="1" width="20" height="20" rx="3"/><rect x="89" y="1" width="20" height="20" rx="3"/><rect x="111" y="1" width="20" height="20" rx="3"/><rect x="133" y="1" width="20" height="20" rx="3"/><rect x="155" y="1" width="20" height="20" rx="3"/><rect x="177" y="1" width="20" height="20" rx="3"/><rect x="199" y="1" width="20" height="20" rx="3"/><rect x="1" y="23" width="20" height="20" rx="3"/><rect x="23" y="23" width="20" height="20" rx="3"/><rect x="45" y="23" width="20" height="20" rx="3"/><rect x="67" y="23" width="20" height="20" rx="3"/><rect x="89" y="23" width="20" height="20" rx="3"/><rect x="111" y="23" width="20" height="20" rx="3"/><rect x="133" y="23" width="20" height="20" rx="3"/><rect x="155" y="23" width="20" height="20" rx="3"/><rect x="177" y="23" width="20" height="20" rx="3"/><rect x="199" y="23" width="20" height="20" rx="3"/><rect x="1" y="45" width="20" height="20" rx="3"/><rect x="23" y="45" width="20" height="20" rx="3"/><rect x="45" y="45" width="20" height="20" rx="3"/><rect x="67" y="45" width="20" height="20" rx="3"/></g>
+                <g class="viz-rest-fill"><title>Resto del plantel: ~76%</title><rect x="89" y="45" width="20" height="20" rx="3"/><rect x="111" y="45" width="20" height="20" rx="3"/><rect x="133" y="45" width="20" height="20" rx="3"/><rect x="155" y="45" width="20" height="20" rx="3"/><rect x="177" y="45" width="20" height="20" rx="3"/><rect x="199" y="45" width="20" height="20" rx="3"/><rect x="1" y="67" width="20" height="20" rx="3"/><rect x="23" y="67" width="20" height="20" rx="3"/><rect x="45" y="67" width="20" height="20" rx="3"/><rect x="67" y="67" width="20" height="20" rx="3"/><rect x="89" y="67" width="20" height="20" rx="3"/><rect x="111" y="67" width="20" height="20" rx="3"/><rect x="133" y="67" width="20" height="20" rx="3"/><rect x="155" y="67" width="20" height="20" rx="3"/><rect x="177" y="67" width="20" height="20" rx="3"/><rect x="199" y="67" width="20" height="20" rx="3"/><rect x="1" y="89" width="20" height="20" rx="3"/><rect x="23" y="89" width="20" height="20" rx="3"/><rect x="45" y="89" width="20" height="20" rx="3"/><rect x="67" y="89" width="20" height="20" rx="3"/><rect x="89" y="89" width="20" height="20" rx="3"/><rect x="111" y="89" width="20" height="20" rx="3"/><rect x="133" y="89" width="20" height="20" rx="3"/><rect x="155" y="89" width="20" height="20" rx="3"/><rect x="177" y="89" width="20" height="20" rx="3"/><rect x="199" y="89" width="20" height="20" rx="3"/><rect x="1" y="111" width="20" height="20" rx="3"/><rect x="23" y="111" width="20" height="20" rx="3"/><rect x="45" y="111" width="20" height="20" rx="3"/><rect x="67" y="111" width="20" height="20" rx="3"/><rect x="89" y="111" width="20" height="20" rx="3"/><rect x="111" y="111" width="20" height="20" rx="3"/><rect x="133" y="111" width="20" height="20" rx="3"/><rect x="155" y="111" width="20" height="20" rx="3"/><rect x="177" y="111" width="20" height="20" rx="3"/><rect x="199" y="111" width="20" height="20" rx="3"/><rect x="1" y="133" width="20" height="20" rx="3"/><rect x="23" y="133" width="20" height="20" rx="3"/><rect x="45" y="133" width="20" height="20" rx="3"/><rect x="67" y="133" width="20" height="20" rx="3"/><rect x="89" y="133" width="20" height="20" rx="3"/><rect x="111" y="133" width="20" height="20" rx="3"/><rect x="133" y="133" width="20" height="20" rx="3"/><rect x="155" y="133" width="20" height="20" rx="3"/><rect x="177" y="133" width="20" height="20" rx="3"/><rect x="199" y="133" width="20" height="20" rx="3"/><rect x="1" y="155" width="20" height="20" rx="3"/><rect x="23" y="155" width="20" height="20" rx="3"/><rect x="45" y="155" width="20" height="20" rx="3"/><rect x="67" y="155" width="20" height="20" rx="3"/><rect x="89" y="155" width="20" height="20" rx="3"/><rect x="111" y="155" width="20" height="20" rx="3"/><rect x="133" y="155" width="20" height="20" rx="3"/><rect x="155" y="155" width="20" height="20" rx="3"/><rect x="177" y="155" width="20" height="20" rx="3"/><rect x="199" y="155" width="20" height="20" rx="3"/><rect x="1" y="177" width="20" height="20" rx="3"/><rect x="23" y="177" width="20" height="20" rx="3"/><rect x="45" y="177" width="20" height="20" rx="3"/><rect x="67" y="177" width="20" height="20" rx="3"/><rect x="89" y="177" width="20" height="20" rx="3"/><rect x="111" y="177" width="20" height="20" rx="3"/><rect x="133" y="177" width="20" height="20" rx="3"/><rect x="155" y="177" width="20" height="20" rx="3"/><rect x="177" y="177" width="20" height="20" rx="3"/><rect x="199" y="177" width="20" height="20" rx="3"/><rect x="1" y="199" width="20" height="20" rx="3"/><rect x="23" y="199" width="20" height="20" rx="3"/><rect x="45" y="199" width="20" height="20" rx="3"/><rect x="67" y="199" width="20" height="20" rx="3"/><rect x="89" y="199" width="20" height="20" rx="3"/><rect x="111" y="199" width="20" height="20" rx="3"/><rect x="133" y="199" width="20" height="20" rx="3"/><rect x="155" y="199" width="20" height="20" rx="3"/><rect x="177" y="199" width="20" height="20" rx="3"/><rect x="199" y="199" width="20" height="20" rx="3"/></g>
+              </g>
+            </svg>
+            <ul class="viz-legend">
+              <li><i class="sw sw-main" aria-hidden="true"></i>3 jugadores · ~24%</li>
+              <li><i class="sw sw-rest" aria-hidden="true"></i>Resto del plantel · ~76%</li>
+            </ul>
+            <p class="lab-note">Cada celda = 1% del volumen de sprint a ≥34 km/h.</p>
+          </figure>
+        </div>
+
+        <div class="lab-kpis reveal">
+          <div class="lab-kpi"><span>3.0</span>goles a favor por partido</div>
+          <div class="lab-kpi"><span>80%</span>victorias en el período</div>
+          <div class="lab-kpi"><span>5</span>sesiones de carga anómalas detectadas</div>
+        </div>
+
+        <details class="lab-table reveal">
+          <summary>Ver los datos en tabla</summary>
+          <table>
+            <caption>John Brown University · temporada SAC 2025 · fuente: análisis ATHLOS</caption>
+            <thead><tr><th scope="col">Métrica</th><th scope="col">Valor</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Posesión media (últimos 5 partidos)</th><td>58%</td></tr>
+              <tr><th scope="row">Goles a favor por partido</th><td>3.0</td></tr>
+              <tr><th scope="row">Victorias en el período</th><td>80%</td></tr>
+              <tr><th scope="row">Posesión en el tercio ofensivo</th><td>20% (objetivo 25–27%)</td></tr>
+              <tr><th scope="row">Sprint a ≥34 km/h concentrado en 3 jugadores</th><td>~24%</td></tr>
+              <tr><th scope="row">Sesiones de carga anómalas</th><td>5</td></tr>
+            </tbody>
+          </table>
+        </details>
+        <p class="lab-source">Fuente: análisis ATHLOS de John Brown University, temporada SAC 2025.</p>
+
+        <!-- Bloque Síguenos: cuentas oficiales pendientes. NO inventar cuentas. -->
+        <div class="follow reveal">
+          <div>
+            <h3>Síguenos</h3>
+            <p>Sigue el Laboratorio ATHLOS y comparte las visualizaciones.</p>
+          </div>
+          <ul class="social">
+            <!-- TODO: reemplazar href="#" por la URL real de la cuenta oficial de ATHLOS en Instagram -->
+            <li><a href="#" data-social-pending>Instagram</a></li>
+            <!-- TODO: reemplazar href="#" por la URL real de la cuenta oficial de ATHLOS en X -->
+            <li><a href="#" data-social-pending>X</a></li>
+            <!-- TODO: reemplazar href="#" por la URL real de la página oficial de ATHLOS en LinkedIn -->
+            <li><a href="#" data-social-pending>LinkedIn</a></li>
+            <!-- TODO: reemplazar href="#" por la URL real del canal oficial de ATHLOS en YouTube -->
+            <li><a href="#" data-social-pending>YouTube</a></li>
+            <!-- TODO: reemplazar href="#" por la URL real de la cuenta oficial de ATHLOS en TikTok -->
+            <li><a href="#" data-social-pending>TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CLUBES PILOTO (prueba social) ======================= -->
+    <!-- Regla: aquí van SOLO clubes, logos, testimonios y menciones en medios
+         reales y autorizados por escrito. No inventar ninguno. Para añadir un
+         logo: <li class="logo-tile"><img src="assets/clientes/xxx.svg" alt="Nombre del club" /></li>
+         Espacio reservado para menciones en medios: añadir solo citas reales y verificables. -->
+    <section class="section" id="clubes-piloto">
+      <div class="container">
+        <p class="kicker reveal">Clubes piloto</p>
+        <h2 class="reveal">Construido con datos reales de competición</h2>
+        <p class="section-sub reveal">ATHLOS ya se validó con la temporada real de un equipo
+        universitario. Buscamos más clubes piloto que lo usen con sus propios datos y nos ayuden a
+        mejorarlo.</p>
+
+        <ul class="logo-wall reveal">
+          <li class="logo-tile logo-case">
+            <a href="#resultados">
+              <strong>John Brown University</strong>
+              <span>Fútbol universitario · SAC 2025 · caso real</span>
+            </a>
+          </li>
+          <li class="logo-tile logo-empty"><span>Tu club aquí</span></li>
+          <li class="logo-tile logo-empty"><span>Tu club aquí</span></li>
+        </ul>
+
+        <!-- PROPUESTA PENDIENTE DE APROBACIÓN DEL NEGOCIO: oferta de club piloto
+             "3 meses Pro gratis a cambio de tu caso de éxito" (condiciones, cupo
+             y vigencia por definir). -->
+        <div class="pilot reveal">
+          <div>
+            <span class="badge-green">Cupos limitados</span>
+            <h3>Sé club piloto: 3 meses Pro gratis a cambio de tu caso de éxito</h3>
+            <p>Usas el plan Pro completo durante 3 meses. A cambio, medimos juntos el impacto y nos
+            permites publicar tu caso con las métricas que acordemos con tu club.</p>
+          </div>
+          <a href="#demo" class="btn btn-primary btn-lg" data-request-type="demo"
+             data-prefill="Me interesa ser club piloto (3 meses Pro gratis a cambio del caso de éxito).">Quiero ser club piloto</a>
         </div>
       </div>
     </section>
 
     <!-- ======================= PRECIOS ======================= -->
-    <section class="section" id="precios">
+    <section class="section section-alt" id="precios">
       <div class="container">
         <p class="kicker reveal">Precios</p>
         <h2 class="reveal">Planes que caben en el presupuesto real de un club</h2>
-        <div class="grid grid-3 pricing">
+        <!-- PROPUESTA PENDIENTE DE APROBACIÓN DEL NEGOCIO: "1 partido gratis sin tarjeta". -->
+        <p class="free-banner reveal"><strong>1 partido gratis, sin tarjeta.</strong> Prueba con tu propio video antes de
+        elegir plan.</p>
+        <div class="grid grid-4 pricing">
+          <!-- PROPUESTA PENDIENTE DE APROBACIÓN DEL NEGOCIO: plan Coach a USD 39/mes
+               y sus límites (1 equipo, 2 partidos/mes, 25 perfiles verificados).
+               Si cambia, actualizar también el JSON-LD del <head>. -->
+          <article class="card price-card reveal">
+            <h3 class="tier">Coach</h3>
+            <div class="price"><span class="cur">USD</span>39<span class="per">/mes</span></div>
+            <p class="price-for">Para el entrenador que quiere empezar a medir.</p>
+            <ul>
+              <li>1 equipo</li>
+              <li>Análisis de video: 2 partidos/mes</li>
+              <li>Reportes PDF</li>
+              <li>Perfil verificado para hasta 25 atletas</li>
+              <li>Exporta gráficos en PNG y CSV</li>
+            </ul>
+            <a href="#demo" class="btn btn-ghost" data-request-type="free_report">Empieza gratis</a>
+          </article>
+          <!-- TODO (negocio): definir los límites de análisis de video y de perfiles
+               verificados en Academy, Pro y Elite ("Todo Coach +" hereda los de Coach). -->
           <article class="card price-card reveal">
             <h3 class="tier">Academy</h3>
             <div class="price"><span class="cur">USD</span>149<span class="per">/mes</span></div>
+            <p class="price-for">Para academias y programas con varias categorías.</p>
             <ul>
+              <li>Todo Coach +</li>
               <li>Estadísticas y perfiles físicos</li>
               <li>Alertas de fatiga y wellness</li>
               <li>Informes automáticos</li>
               <li>Hasta 2 equipos</li>
             </ul>
-            <a href="#demo" class="btn btn-ghost">Solicitar demo</a>
+            <a href="#demo" class="btn btn-ghost" data-request-type="demo">Solicitar demo</a>
           </article>
           <article class="card price-card featured reveal">
             <span class="feat-badge">El plan del nicho inicial</span>
             <h3 class="tier">Pro</h3>
             <div class="price"><span class="cur">USD</span>449<span class="per">/mes</span></div>
+            <p class="price-for">Para universidades y clubes de ascenso.</p>
             <ul>
               <li>Todo Academy +</li>
               <li>Integración GPS y computer vision</li>
@@ -396,11 +793,12 @@
               <li>Simulación táctica y 11 ideal</li>
               <li>Hasta 5 equipos</li>
             </ul>
-            <a href="#demo" class="btn btn-primary">Solicitar demo</a>
+            <a href="#demo" class="btn btn-primary" data-request-type="demo">Solicitar demo</a>
           </article>
           <article class="card price-card reveal">
             <h3 class="tier">Elite</h3>
             <div class="price"><span class="cur">USD</span>1,190<span class="per">/mes</span></div>
+            <p class="price-for">Para clubes profesionales y ligas.</p>
             <ul>
               <li>Todo Pro +</li>
               <li>Suite de IA completa</li>
@@ -409,24 +807,43 @@
               <li>AthlosBot (asistente IA)</li>
               <li>API dedicada</li>
             </ul>
-            <a href="#demo" class="btn btn-ghost">Solicitar demo</a>
+            <a href="#demo" class="btn btn-ghost" data-request-type="demo">Solicitar demo</a>
           </article>
         </div>
-        <p class="pricing-note reveal">¿Prefieres empezar pequeño? Informes puntuales desde USD 300
-        y proyectos de implementación desde USD 500 — la puerta de entrada sin suscripción.</p>
+        <p class="pricing-note reveal">¿Prefieres empezar sin suscripción? Informes puntuales desde
+        USD 300 y proyectos de implementación desde USD 500.</p>
       </div>
     </section>
 
     <!-- ======================= FAQ ======================= -->
-    <section class="section section-alt" id="faq">
+    <section class="section" id="faq">
       <div class="container container-narrow">
         <p class="kicker reveal">Preguntas frecuentes</p>
         <h2 class="reveal">Lo que todo cuerpo técnico nos pregunta</h2>
 
         <details class="faq-item reveal" open>
+          <summary>¿Qué recibo con el análisis gratis de un partido?</summary>
+          <p>Un reporte del partido generado con computer vision a partir de tu propio video:
+          distancias recorridas, velocidades, mapa de calor y red de pases. Es 1 partido, sin
+          tarjeta y sin compromiso: si no eliges un plan, no se cobra nada.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Qué video necesito?</summary>
+          <p>La grabación completa del partido en un enlace que podamos abrir (p. ej. YouTube o
+          Google Drive). Funciona mejor con una cámara fija y elevada que cubra la cancha, como
+          VEO o un trípode en la grada. Si el video no permite medir con fiabilidad, te lo decimos.</p>
+        </details>
+        <details class="faq-item reveal">
           <summary>¿Necesito tener GPS propio para usar ATHLOS?</summary>
-          <p>No. El plan Academy funciona solo con estadísticas y video. Si ya tienes Catapult u
-          otro GPS, ATHLOS ingiere sus exports directamente y desbloquea los modelos físicos.</p>
+          <p>No. Coach y Academy funcionan con video y estadísticas. Si ya tienes Catapult u otro
+          GPS, ATHLOS ingiere sus exports directamente y desbloquea los modelos físicos.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Qué es el Perfil verificado del atleta?</summary>
+          <p>Una tarjeta pública y compartible con métricas medidas por ATHLOS en partidos y
+          entrenamientos reales (velocidades, distancias, sprints, mapas de calor), útil para
+          becas universitarias y scouts. Solo se publica con el consentimiento del atleta y de su
+          club —y de sus padres o tutores si es menor de edad—, y nunca incluye datos de wellness.</p>
         </details>
         <details class="faq-item reveal">
           <summary>¿Funciona con VEO o con una cámara normal?</summary>
@@ -490,16 +907,37 @@
       </div>
     </section>
 
-    <!-- ======================= DEMO FORM ======================= -->
+    <!-- ======================= FORMULARIO (partido gratis / demo) ======================= -->
     <section class="section demo" id="demo">
       <div class="container container-narrow">
-        <p class="kicker reveal">Acceso a la demo</p>
-        <h2 class="reveal">Ve tus datos convertidos en decisiones</h2>
-        <p class="section-sub reveal">Cuéntanos quién eres y te contactamos en 24–48 horas para
-        agendar una demo con datos reales.</p>
+        <p class="kicker reveal">Empieza hoy</p>
+        <h2 class="reveal" id="demoTitle">Analiza gratis un partido</h2>
+        <p class="section-sub reveal" id="demoSub">Déjanos el enlace a tu video y te enviamos el
+        reporte con distancias, velocidades, mapa de calor y red de pases. 1 partido gratis, sin
+        tarjeta. ¿Prefieres una demo guiada? Elígela abajo.</p>
 
         <div class="card form-card reveal">
           <form id="demoForm" novalidate>
+            <fieldset class="type-switch">
+              <legend>¿Qué quieres hacer?</legend>
+              <label class="type-option">
+                <input type="radio" name="request_type" value="free_report" checked />
+                <span><strong>Analizar gratis un partido</strong><small>Envías un video, recibes un reporte</small></span>
+              </label>
+              <label class="type-option">
+                <input type="radio" name="request_type" value="demo" />
+                <span><strong>Solicitar una demo guiada</strong><small>30 minutos con datos reales</small></span>
+              </label>
+            </fieldset>
+
+            <div class="field" id="videoField">
+              <label for="video_url">Enlace al video del partido *</label>
+              <input id="video_url" name="video_url" type="url" inputmode="url" maxlength="500"
+                placeholder="https://…" autocomplete="url" aria-describedby="videoHelp" />
+              <p class="field-help" id="videoHelp">Enlace compartible (p. ej. YouTube o Google Drive) a
+              la grabación completa, idealmente desde una cámara fija y elevada.</p>
+            </div>
+
             <div class="form-grid">
               <div class="field">
                 <label for="full_name">Nombre completo *</label>
@@ -534,7 +972,7 @@
                   <option value="">Selecciona…</option>
                   <option value="universitario">Universitario</option>
                   <option value="profesional">Profesional</option>
-                  <option value="semipro">Semiprofesional</option>
+                  <option value="semipro">Semiprofesional / ascenso</option>
                   <option value="academia">Academia</option>
                 </select>
               </div>
@@ -554,17 +992,17 @@
             <div id="formAlert" class="form-alert" role="alert" hidden></div>
 
             <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">
-              Solicitar acceso a la demo
+              Enviar mi partido gratis
             </button>
-            <p class="form-fine">Sin spam. Usamos tus datos solo para contactarte sobre ATHLOS.</p>
+            <p class="form-fine">Sin spam y sin tarjeta. Usamos tus datos solo para contactarte sobre ATHLOS.</p>
           </form>
 
-          <div id="formSuccess" class="form-success" hidden>
+          <div id="formSuccess" class="form-success" hidden tabindex="-1">
             <div class="check" aria-hidden="true">✓</div>
-            <h3>¡Solicitud recibida!</h3>
-            <p>Te contactaremos en 24–48 horas para agendar tu demo. Mientras tanto, revisa la
-            sección de <a href="#resultados">resultados</a> para ver lo que ATHLOS ya hace con
-            datos reales.</p>
+            <h3 id="successTitle">¡Solicitud recibida!</h3>
+            <p id="successText">Te contactaremos en 24–48 horas para agendar tu demo. Mientras tanto,
+            revisa la sección de <a href="#resultados">resultados</a> para ver lo que ATHLOS ya hace
+            con datos reales.</p>
           </div>
         </div>
       </div>
@@ -580,23 +1018,29 @@
           <span class="brand-name">ATHLOS</span>
         </a>
         <p class="footer-tag">Del griego <em>áthlos</em> (ἆθλος): la hazaña, la contienda.<br />
-        Construido en Costa Rica para el deporte de las Américas.</p>
+        Los datos del talento que nadie está midiendo. Construido en Costa Rica para el deporte de
+        las Américas.</p>
       </div>
       <div class="footer-col">
         <h4>Producto</h4>
         <a href="#producto">Funciones</a>
-        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#perfil-atleta">Perfil verificado</a>
+        <a href="#portal-atleta">Portal del atleta</a>
         <a href="#precios">Precios</a>
       </div>
       <div class="footer-col">
         <h4>Recursos</h4>
+        <a href="#laboratorio">Laboratorio</a>
         <a href="#resultados">Caso de estudio</a>
+        <a href="#clubes-piloto">Clubes piloto</a>
         <a href="#faq">Preguntas frecuentes</a>
-        <a href="#demo">Solicitar demo</a>
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>
+        <a href="#demo" data-request-type="free_report">Analiza gratis un partido</a>
+        <a href="#demo" data-request-type="demo">Solicitar demo</a>
         <a href="mailto:hola@athlos.app" id="contactMail">hola@athlos.app</a>
+        <!-- TODO: apuntar a la página oficial de ATHLOS en LinkedIn (hoy enlaza a la portada de LinkedIn) -->
         <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
